@@ -1,0 +1,10 @@
+# fix all the git ignore issues
+
+.env
+.env.local
+backend/node_modules
+backend/http
+client/node_modules
+client/http
+
+
