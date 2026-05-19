@@ -8,6 +8,7 @@ import cors from "cors";
 import { errorHandler } from "./middlewares/errorHandler.middleare";
 import { BadRequestException } from "./utils/app-error";
 import { asyncHandler } from "./middlewares/asyncHandler.middleware";
+import connectDb from "./config/db";
 
 const app = express();
 
@@ -33,6 +34,7 @@ app.get(
 );
 
 app.use(errorHandler);
-app.listen(ENV.PORT, () => {
+app.listen(ENV.PORT, async () => {
+  await connectDb();
   console.log(`Server is running on port ${ENV.PORT}`);
 });
