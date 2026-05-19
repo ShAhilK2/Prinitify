@@ -6,9 +6,10 @@ import cookieParser from "cookie-parser";
 import { HTTPSTATUS } from "./config/http.config";
 import cors from "cors";
 import { errorHandler } from "./middlewares/errorHandler.middleare";
-import { BadRequestException } from "./utils/app-error";
 import { asyncHandler } from "./middlewares/asyncHandler.middleware";
 import connectDb from "./config/db";
+import { toNodeHandler } from "better-auth/node";
+import { getAuth } from "./lib/auth";
 
 const app = express();
 
@@ -24,6 +25,11 @@ app.use(
   }),
 );
 
+app.all("/api/auth/*splat", (req, res) => {
+  const auth = getAuth();
+  return toNodeHandler(auth)(req, res);
+}); // For ExpressJS v4
+// app.all("/api/auth/*splat", toNodeHandler(auth)); For ExpressJS v5
 app.get(
   "/health",
   asyncHandler(async (_req: Request, res: Response) => {
