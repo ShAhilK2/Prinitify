@@ -7,4 +7,5 @@ backend/http
 client/node_modules
 client/http
 
-
+backend/.DS_Store
+.DS_Store
