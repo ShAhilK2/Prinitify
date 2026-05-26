@@ -3,7 +3,7 @@ import mongoose, { Document } from "mongoose";
 //  can also be called  templatecolors
 
 export interface ProductColorDocument extends Document {
-  templateId : mongoose.Schema.Types.ObjectId;
+  templateId : mongoose.Types.ObjectId;
   name: string;
   color: string;
   mockupUrl: string;

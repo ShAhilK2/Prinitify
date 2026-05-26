@@ -3,7 +3,7 @@
 
 import "dotenv/config"
 
-import Product, { ProductType, Section, SIZE_OPTIONS } from "../models/products.model";
+import Product, { ProductType, Section, SIZE_OPTIONS } from "../models/product.model";
 import connectDb from "../config/db";
 
 

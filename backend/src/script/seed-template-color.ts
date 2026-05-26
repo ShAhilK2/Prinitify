@@ -3,8 +3,8 @@ import "dotenv/config";
 import ProductColor from "../models/product-color.model";
 import connectDb from "../config/db";
 
-const TSHIRT_TEMPLATE_ID = "69c2c4aa22a56fb1eb6de53d"
-const HOODIE_TEMPLATE_ID = "69c2c4aa22a56fb1eb6de53e"
+const TSHIRT_TEMPLATE_ID = "6a131d135ffe37b094222a3d"
+const HOODIE_TEMPLATE_ID = "6a131d135ffe37b094222a42"
 
 const colors = [
   // T-Shirt Colors

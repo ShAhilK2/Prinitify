@@ -1,5 +1,5 @@
 import mongoose,{Document} from "mongoose";
-import { SIZE_OPTIONS } from "./products.model";
+import { SIZE_OPTIONS } from "./product.model";
 
 
 export enum OrderStatus {

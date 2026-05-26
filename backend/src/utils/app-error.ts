@@ -9,6 +9,7 @@ export const ErrorCodes = {
   ERR_FORBIDDEN: "FORBIDDEN",
   ERR_NOT_FOUND: "NOT_FOUND",
   ERR_VALIDATION: "VALIDATION_ERROR",
+  
 } as const;
 
 export type ErrorCodeType = (typeof ErrorCodes)[keyof typeof ErrorCodes];
